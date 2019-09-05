@@ -12,5 +12,14 @@ def full_title(page_title = "")
 
 end
 
+def flashAlert(alert="")
+  base_alert = "alert"
+
+  if(alert.empty?)
+    base_alert
+  else
+    base_alert + " " + "alert-" + alert
+  end
+end
 
 end
