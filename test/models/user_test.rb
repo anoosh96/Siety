@@ -5,7 +5,7 @@ class UserTest < ActiveSupport::TestCase
   #   assert true
   # end'
   def setup
-    @user = User.new(name:"Ahmed Anoosh", email: "ahmedanooshworks@gmail.com");
+    @user = User.new(name:"Ahmed Anoosh", email: "ahmedanooshworks@gmail.com",password: "foobar", password_confirmation: "foobar");
 
   end
 
