@@ -1,0 +1,5 @@
+<%= link_to gravatar_for(object, size: 80), object %>
+<h3><%= object.name %></h3>
+<% Rails.logger.debug("sds") %>
+<span><%= link_to "view my profile", object %></span>
+<span style="display:block;"><%= pluralize(object.microposts.count, "micropost") %></span>
