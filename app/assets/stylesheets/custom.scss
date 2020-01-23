@@ -79,3 +79,53 @@ input {
     overflow: auto;
   }
 }
+
+.microposts {
+ list-style: none;
+  li {
+    border-top: 1px solid black;
+    padding:20px;
+  }
+
+  .content {
+    display: block;
+    margin-left: 60px;
+    img{
+      display: block;
+      margin: 10px;
+    }
+  }
+
+  .timestamp {
+    display: block;
+    margin-left: 60px;
+    margin-top: 20px;
+    font-size: 0.8em;
+    a{
+      margin-left: 10px;
+    }
+  }
+
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+  }
+
+}
+
+
+.user_info {
+
+   .gravatar {
+
+   float: left;
+   margin-right: 10px;
+ }
+}
+
+
+
+section {
+
+    margin: 20px;
+}

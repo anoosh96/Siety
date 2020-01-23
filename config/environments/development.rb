@@ -38,7 +38,7 @@ Rails.application.configure do
 
   host= "localhost:3000"
 
-  config.action_mailer.default_url_options = { host: "example.com", protocol: 'https' }
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 
   config.action_mailer.perform_caching = false
 

@@ -19,7 +19,26 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
     redirect_to root_url and return unless @user.activated?
+  end
+
+  def following
+
+      @title = "Following"
+      @user = User.find(params[:id])
+      @users = @user.following.paginate(page: params[:page])
+      render '_show_follow'
+
+  end
+
+  def followers
+
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render '_show_follow'
+
   end
 
 
@@ -62,14 +81,7 @@ end
 
 
    # Confirms a logged-in user. def logged_in_user
-   def logged_in_user
 
-   unless logged_in?
-     flash[:danger] = "Please log in."
-     store_location
-     redirect_to login_url
-   end
- end
 
  def correct_user
 
